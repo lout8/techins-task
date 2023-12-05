@@ -1,7 +1,8 @@
-import { Inter } from 'next/font/google'
 import './globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import Providers from '@/lib/providers'
+import Header from '@/components/layout/Header'
+import Footer from '@/components/layout/Footer'
+import ScrollToTop from '@/components/layout/ScrollToTop'
 
 export const metadata = {
   title: 'Create Next App',
@@ -9,9 +10,19 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+
+
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html className=' font-mono' lang="en">
+      <body className="dark:bg-neutral-800 dark:text-neutral-100 dark:bg-dark-bg-image dark:border-neutral-100 bg-neutral-100 text-neutral-800 bg-bg-image min-h-screen bg-cover">
+        <Providers>
+            <ScrollToTop/>
+            <Header/>
+            {children}
+            <Footer/>
+        </Providers>
+        
+      </body>
     </html>
   )
 }
