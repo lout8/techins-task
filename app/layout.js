@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html className=' font-mono' lang="en">
-      <body className="dark:bg-neutral-800 dark:text-neutral-100 dark:bg-dark-bg-image dark:border-neutral-100 bg-neutral-100 text-neutral-800 bg-bg-image min-h-screen bg-cover">
+      <body className="dark:bg-neutral-800 dark:text-neutral-100 dark:bg-dark-bg-image dark:border-neutral-100 bg-neutral-100 text-neutral-800 bg-fixed bg-bg-image w-full h-screen bg-cover">
         <Providers>
             <ScrollToTop/>
             <Header/>
