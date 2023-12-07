@@ -16,7 +16,7 @@ const About = () => {
             className=" w-80 h-80 object-cover rounded-lg pointer-events-none"/>
             <div className='flex flex-col gap-5 justify-center leading-relaxed'>
               <p>A passionate and detail-oriented Frontend Developer with knowledge in HTML and CSS, as well as third-party libraries such as React.js, Next.js, Gatsby.js and Tailwind CSS.</p>
-              <p>I approach challenges with a problem-solving mindset, finding elegant and effective solutions. Whether it's optimizing performance, improving user experience, or troubleshooting issues, I enjoy the process of refining and enhancing digital products.</p>
+              <p>{"I approach challenges with a problem-solving mindset, finding elegant and effective solutions. Whether it's optimizing performance, improving user experience, or troubleshooting issues, I enjoy the process of refining and enhancing digital products."}</p>
             </div>
         </div>
         <div className='flex flex-col gap-8'>
