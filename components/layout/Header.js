@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { useEffect } from 'react'
 import Link from 'next/link'
 import ThemeSwitch from './ThemeSwitch'
 
@@ -9,10 +9,14 @@ import { HiBars3 } from "react-icons/hi2";
 
 const Header = ({toggle, setBar}) => {
   const pathname = usePathname();
-  
-
   const handleBar = () => {setBar(!toggle)}
   const closeBar = () => {setBar(false)}
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    })
+  }, [toggle]);
   const logo = (
     <svg className=' w-24 h-7 max-sm:w-20 max-sm:h-7' viewBox="0 0 111 28"  fill="none" xmlns="http://www.w3.org/2000/svg">
       <path className="fill-current dark:text-neutral-100 text-neutral-800 group-hover:text-purple-400 transition duration-500" d="M33.5418 17.1137V19.5369H2.54516V25.4517H40V27.861H0.135093V17.1137H33.5418ZM39.8641 0.139021V2.56222H2.40929V7.52979H33.4074V9.93985H0V0.139021H39.8641Z"/>
@@ -21,7 +25,7 @@ const Header = ({toggle, setBar}) => {
   )
   return (
       <div className='relative flex flex-col justify-between items-center z-10 mb-40'>
-        <div className={`absolute bg-bg-image dark:bg-dark-bg-image top-[0] h-screen w-full bg-cover transition duration-500 z-10 ${toggle === true ? " opacity-100 right-0 ": " opacity-0 right-full"}`}></div>
+        <div className={` overflow-hidden absolute dark:bg-neutral-900 bg-neutral-50 backdrop-blur-3xl top-[0] w-full bg-cover transition duration-500 z-10 ${toggle === true ? " opacity-95 right-0 h-[150vh]": " opacity-0 right-full h-0 "}`}></div>
         <div className='absolute top-0 flex w-full justify-between px-[15%] max-sm:px-[5%] items-center py-16 z-20'>
           <Link className='group' onClick={closeBar} href="/">{logo}</Link> 
           <div className='group flex gap-8 items-center max-lg:hidden select-none'>
@@ -31,7 +35,7 @@ const Header = ({toggle, setBar}) => {
             <ThemeSwitch/>
           </div>
           <div className='hidden gap-8 items-center max-lg:flex'>
-            <button onClick={handleBar} className='text-3xl cursor-pointer hover:text-indigo-400 transition duration-500'><HiBars3/></button>
+            <button onClick={handleBar} className='text-3xl cursor-pointer hover:text-purple-400 transition duration-500'><HiBars3/></button>
             <ThemeSwitch/>
           </div>
         </div>

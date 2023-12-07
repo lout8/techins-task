@@ -26,5 +26,7 @@ module.exports = {
       'raleway': ['Raleway']
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }

@@ -33,7 +33,7 @@ const About = () => {
             <h3>Figma</h3>
           </div>
         </div>
-        <Link className='group flex w-fit justify-center items-center gap-3' href="/projects">
+      <Link className='group flex w-fit justify-center items-center gap-3' href="/projects">
         <div className='group-hover:bg-[length:100%_2px] link-underline link-underline-black border-b border-neutral-800 dark:border-neutral-100'>Lets explore my projects</div>
         <div className='mt-0.5 text-xl animate-arrow'><IoIosArrowRoundForward/></div>
       </Link>
