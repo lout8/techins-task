@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { IoIosArrowRoundForward } from "react-icons/io";
+import profile from "@/public/img/profile.jpg"
 
 const About = () => {
   return (
@@ -9,7 +10,7 @@ const About = () => {
         <h1>About me</h1>
         <div className='flex gap-14 max-lg:flex-col'>
           <Image
-            src='/img/profile.jpg'
+            src={profile}
             alt='profile'
             width={800}
             height={800}
