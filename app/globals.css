@@ -17,10 +17,10 @@
 		@apply text-3xl font-semibold tracking-widest uppercase 
 	}
 	h3{
-		@apply text-xl font-medium tracking-wider text-neutral-200
+		@apply text-xl font-medium tracking-wider text-neutral-700 dark:text-neutral-200
 	}
 	p{
-		@apply font-light tracking-wider text-neutral-300
+		@apply font-light tracking-wider text-neutral-700 dark:text-neutral-300
 	}
 	/* Hover animation */
     .link-underline {
