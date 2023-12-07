@@ -23,7 +23,7 @@ const ScrollToTop = () => {
   
     return (
         <div className='fixed bottom-4 right-4 z-10'>
-<           button aria-label='to top button' className={`bg-indigo-400 p-2 rounded-xl text-neutral-100 hover:bg-opacity-80 hover:text-opacity-80 transition duration-500 ${isVisible ? "opacity-100" : "opacity-0"}`} onClick={scrollToTop}>
+<           button aria-label='to top button' className={` bg-neutral-800 text-neutral-100 dark:bg-neutral-100 dark:text-neutral-800 p-2 rounded-xl dark:hover:bg-opacity-80 hover:bg-opacity-80 dark:hover:text-opacity-80 hover:text-opacity-80 transition duration-500 ${isVisible ? "opacity-100" : "opacity-0"}`} onClick={scrollToTop}>
                 <AiOutlineArrowUp className=' text-2xl max-sm:text-xl'/>
             </button>
         </div>

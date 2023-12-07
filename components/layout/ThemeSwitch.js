@@ -14,8 +14,8 @@ const ThemeSwitch = () => {
   return (
     <div className="flex gap-3 text-2xl cursor-pointer">
       {theme === "dark"
-      ? <div onClick={() => setTheme("light")} className=" self-center hover:text-indigo-400 transition duration-500"><VscColorMode/></div>
-      : <div onClick={() => setTheme("dark")} className="self-center hover:text-indigo-400 transition duration-500"><VscColorMode/></div> 
+      ? <div onClick={() => setTheme("light")} className=" self-center hover:text-purple-400 transition duration-500"><VscColorMode/></div>
+      : <div onClick={() => setTheme("dark")} className="self-center hover:text-purple-400 transition duration-500"><VscColorMode/></div> 
       }
     </div>
   )
