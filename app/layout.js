@@ -1,5 +1,5 @@
 import './globals.css'
-import LayoutComponent from '@/components/layout/LayoutComponent'
+import LayoutComponent from '../components/layout/LayoutComponent'
 
 export const metadata = {
   title: 'Create Next App',
@@ -7,8 +7,6 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-
-
   return (
     <LayoutComponent>
       {children}
