@@ -7,9 +7,9 @@ import ThemeSwitch from './ThemeSwitch'
 
 import { HiBars3 } from "react-icons/hi2";
 
-const Header = () => {
+const Header = ({toggle, setBar}) => {
   const pathname = usePathname();
-  const [toggle, setBar] = useState(false)
+  
 
   const handleBar = () => {setBar(!toggle)}
   const closeBar = () => {setBar(false)}
@@ -35,7 +35,7 @@ const Header = () => {
             <ThemeSwitch/>
           </div>
         </div>
-        <div className={`group hidden flex-col gap-8 items-center max-lg:flex absolute h-fit w-full select-none transition duration-500 z-20 ${toggle === true ? " opacity-100 top-40": " opacity-0 right-full"}`}>
+        <div className={`group hidden flex-col gap-8 items-center max-lg:flex absolute h-fit w-full select-none transition duration-500 z-20 ${toggle === true ? " opacity-100 top-40 overflow-hidden": " opacity-0 right-full"}`}>
           <Link onClick={closeBar} className={`link-underline link-underline-black ${pathname === "/about" ? "border-b dark:border-neutral-100 border-neutral-800" : "none"}`} href="/about">About</Link>
           <Link onClick={closeBar} className={`link-underline link-underline-black ${pathname === "/projects" ? "border-b dark:border-neutral-100 border-neutral-800" : "none"}`} href="/projects">Projects</Link>
           <Link onClick={closeBar} className={`link-underline link-underline-black ${pathname === "/contact" ? "border-b dark:border-neutral-100 border-neutral-800" : "none"}`} href="/contact">Contact</Link>
