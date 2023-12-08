@@ -2,6 +2,10 @@ import React from 'react'
 import Link from 'next/link'
 import { IoIosArrowRoundForward } from "react-icons/io";
 
+export const metadata = {
+  title: 'Contact',
+}
+
 const Contact = () => {
   return (
     <div className='flex flex-col gap-14 px-[20%] pt-20 max-sm:px-[5%]'>

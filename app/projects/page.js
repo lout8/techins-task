@@ -3,6 +3,10 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import getProjectsMetadata from '@/lib/getProjectsMetadata';
 import ProjectApp from '@/components/parts/ProjectApp';
 
+export const metadata = {
+  title: 'Projects',
+}
+
 const Projects = () => {
   const data = getProjectsMetadata()
   return (

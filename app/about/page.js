@@ -4,6 +4,10 @@ import Link from 'next/link'
 import { IoIosArrowRoundForward } from "react-icons/io";
 import getAboutMetadata from '@/lib/getAboutMetadata';
 
+export const metadata = {
+  title: 'About me',
+}
+
 const About = () => {
   const data = getAboutMetadata()
   return (
