@@ -18,7 +18,7 @@ const ProjectApp = ({data}) => {
         setprojectData({title, image, tech, links, shortD, description})
     }
     useEffect(() => {
-        document.body.className = projectToggle === true ? 'overflow-hidden' : 'overflow-scroll';
+        document.body.className = projectToggle === true ? 'dark:bg-neutral-800 dark:text-neutral-100 dark:bg-dark-bg-image dark:border-neutral-100 bg-neutral-100 text-neutral-800 bg-fixed bg-bg-image w-full bg-cover overflow-hidden' : 'dark:bg-neutral-800 dark:text-neutral-100 dark:bg-dark-bg-image dark:border-neutral-100 bg-neutral-100 text-neutral-800 bg-fixed bg-bg-image w-full bg-cover overflow-scroll';
       });
     const postPreviews = data.map((project) => 
         <ProjectComponent key={project.slug} {...project} handleMoreInfo={handleMoreInfo}/>
