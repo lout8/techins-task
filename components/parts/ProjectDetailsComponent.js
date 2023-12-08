@@ -2,6 +2,8 @@ import React, {useEffect} from 'react'
 import Image from 'next/image'
 import Markdown from "markdown-to-jsx";
 import { IoIosArrowRoundBack } from "react-icons/io";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+
 
 const ProjectDetailsComponent = ({projectData, projectToggle, setProjectToggle}) => {
   const { title, image, tech, links, shortD, description } = projectData
@@ -39,10 +41,15 @@ const ProjectDetailsComponent = ({projectData, projectToggle, setProjectToggle})
               )}
             </div>
             <h3 className='text-lg'>Links</h3>
-            <div className='flex flex-wrap gap-3'>
+            <div className='flex flex-wrap gap-4'>
               {links.map((data) => 
               <div key={data.name}>
-                <a href={data.link} aria-label="XTwitter link" target="_blank" rel="noopener noreferrer" className='dark:bg-neutral-100 bg-neutral-800 dark:text-neutral-800 text-neutral-100 px-2 rounded-md font-light tracking-wider text-sm' >{data.name}</a>
+                {data.name === "direct" ? 
+                  <a href={data.link} aria-label="XTwitter link" target="_blank" rel="noopener noreferrer" className='hover:text-purple-400 transition duration-500 cursor-pointer text-2xl' ><FaExternalLinkAlt/></a> 
+                : 
+                <a href={data.link} aria-label="XTwitter link" target="_blank" rel="noopener noreferrer" className='hover:text-purple-400 transition duration-500 cursor-pointer text-2xl' ><FaGithub/></a> 
+                }
+                
               </div>
               )}
             </div>
