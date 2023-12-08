@@ -1,13 +1,15 @@
 ---
 title: Personal Website
-image: /img/second.jpg
+image: /img/LD.gif
 technologies:
   - tech: Next.js
   - tech: Tailwind CSS
   - tech: Javascript
 Links: 
   - link: https://www.youtube.com/watch?v=0-gf7uyhYPo
+    name: direct
   - link: https://tailwindcss.com/docs/grid-template-columns
+    name: github
 date: 2 Dec 2023
 shortDescription: A passionate and creative Junior Front-End Developer with a love for crafting clean, user-friendly, and intuitive digital experiences.
 description: >-

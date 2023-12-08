@@ -7,7 +7,9 @@ technologies:
   - tech: Javascript
 Links: 
   - link: https://www.youtube.com/watch?v=0-gf7uyhYPo
+    name: direct
   - link: https://tailwindcss.com/docs/grid-template-columns
+    name: github
 date: 3 Dec 2023
 shortDescription: A passionate and creative Junior Front-End Developer with a love for crafting clean, user-friendly, and intuitive digital experiences.
 description: >-

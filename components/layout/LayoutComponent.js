@@ -1,5 +1,5 @@
 "use client"
-import { useState } from 'react'
+import React, { useState } from 'react'
 import Providers from "../../lib/providers"
 import Header from "./Header"
 import Footer from './Footer'
