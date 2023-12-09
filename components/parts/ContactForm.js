@@ -47,7 +47,11 @@ const ContactForm = () => {
                 "form-name": form.getAttribute("name"),
                 ...formData,
               }),
-        }).then(() => alert("Success!")
+        }).then(() => {
+            alert("Success!")
+            setFormData(initialState)
+            router.push(THIS_PAGE)
+        }
         //     response => {
         //     clearTimeout(timer)
         //     if (response.ok){
