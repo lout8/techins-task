@@ -29,6 +29,7 @@ const ContactForm = () => {
         }
         
         const form = event.target
+
         fetch(THIS_PAGE, {
             method: 'POST',
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -65,7 +66,7 @@ const ContactForm = () => {
     }
         
     return (
-        <form name='contact' className='flex flex-col gap-5 pr-[40%] max-xl:pr-[30%] max-lg:pr-[20%] max-md:pr-[10%] max-sm:pr-0' method="POST"  onSubmit={e => handleSubmit(e)} action='#' data-netlify="true" netlify-honeypot="bot-field">
+        <form name='contact' className='flex flex-col gap-5 pr-[40%] max-xl:pr-[30%] max-lg:pr-[20%] max-md:pr-[10%] max-sm:pr-0' method="POST"  onSubmit={e => handleSubmit(e)} action='#' data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true">
             <p start={start} sent={sent} className={`${start === true ? 'flex overflow-visible' : 'hidden'} ${sent === true ? 'text-green-500' : 'text-red-500'}`}>{statusText}</p>
             <input type="hidden" name="form-name" value="contact"/>
             <input style={{display: "none"}} name="bot-field" />
