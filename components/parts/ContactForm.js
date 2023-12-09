@@ -20,21 +20,21 @@ const ContactForm = () => {
         message: "", 
     })
     const [statusText, setStatusText] = useState("")
-    const handleChange = event => {
-        const key = event.target.name
-        const updatedFormValue = event.target.value
+    const handleChange = e => {
+        const key = e.target.name
+        const updatedFormValue = e.target.value
         const newFormData = {...formData, [key]: updatedFormValue}
         setFormData(newFormData)
     }
-    const handleSubmit = event => {
-        event.preventDefault()
+    const handleSubmit = e => {
+        e.preventDefault()
         const initialState = {
         name: "", 
         email: "",
         message: "", 
         }
         
-        const form = event.target
+        const form = e.target
 
         fetch('/', {
             method: 'POST',
@@ -47,7 +47,7 @@ const ContactForm = () => {
                 "form-name": form.getAttribute("name"),
                 ...formData,
               }),
-        }).then(() => router.push({THIS_PAGE}, { scroll: false })
+        }).then(() => alert("Success!")
         //     response => {
         //     clearTimeout(timer)
         //     if (response.ok){
