@@ -7,7 +7,7 @@ const ContactForm = () => {
     let timer;
     const[start, setStart] = useState(false)
     const[sent, setSent] = useState(false)
-    const THIS_PAGE = "/"
+    const THIS_PAGE = "/contact"
     const [formData, setFormData] = useState({
         name: "", 
         email: "",
@@ -20,6 +20,11 @@ const ContactForm = () => {
         const newFormData = {...formData, [key]: updatedFormValue}
         setFormData(newFormData)
     }
+    encode = data => {
+        return Object.keys(data)
+          .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+          .join("&")
+      }
     const handleSubmit = event => {
         event.preventDefault()
         const initialState = {
@@ -33,10 +38,14 @@ const ContactForm = () => {
         fetch(THIS_PAGE, {
             method: 'POST',
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: new URLSearchParams({
-                "form-name": form.getAttribute('name'),
-                ...formData,
-            }).toString(),
+            // body: new URLSearchParams({
+            //     "form-name": form.getAttribute('name'),
+            //     ...formData,
+            // }).toString(),
+            body: this.encode({
+                "form-name": form.getAttribute("name"),
+                ...this.state,
+              }),
         }).then(response => {
             clearTimeout(timer)
             if (response.ok){
