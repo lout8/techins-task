@@ -91,7 +91,7 @@ const ContactForm = () => {
         <form name='contact' className='flex flex-col gap-5 pr-[40%] max-xl:pr-[30%] max-lg:pr-[20%] max-md:pr-[10%] max-sm:pr-0' method="POST" data-netlify="true" >
             <input type="hidden" name="form-name" value="contact"/>
             {/* <input style={{display: "none"}} name="bot-field" /> */}
-            <input type="text" name="name" id="name" placeholder="Name" required/>
+            <input  type="text" name="name" id="name" placeholder="Name" required/>
             <input type="email" name="email" id="email" placeholder="Email" required/>
             <textarea name="message" rows="5" placeholder="Message" required/>
             <button className='bg-neutral-800 dark:bg-neutral-100 text-neutral-100 dark:text-neutral-800 w-fit text-sm py-4 px-3 rounded-md hover:bg-purple-400 dark:hover:bg-purple-400 transition duration-500' type='submit'>Send Message</button>
