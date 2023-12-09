@@ -7,7 +7,7 @@ const ContactForm = () => {
     let timer;
     const[start, setStart] = useState(false)
     const[sent, setSent] = useState(false)
-    const THIS_PAGE = "/contact"
+    const THIS_PAGE = "/"
     const [formData, setFormData] = useState({
         name: "", 
         email: "",
@@ -32,7 +32,7 @@ const ContactForm = () => {
 
         fetch(THIS_PAGE, {
             method: 'POST',
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            // headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: new URLSearchParams({
                 "form-name": form.getAttribute('name'),
                 ...formData,
