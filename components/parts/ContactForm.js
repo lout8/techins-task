@@ -65,9 +65,9 @@ const ContactForm = () => {
     }
         
     return (
-        <form className='flex flex-col gap-5 pr-[40%] max-xl:pr-[30%] max-lg:pr-[20%] max-md:pr-[10%] max-sm:pr-0' name='services' method="POST"  onSubmit={e => handleSubmit(e)} action={THIS_PAGE} data-netlify="true" netlify-honeypot="bot-field">
+        <form name='contact' className='flex flex-col gap-5 pr-[40%] max-xl:pr-[30%] max-lg:pr-[20%] max-md:pr-[10%] max-sm:pr-0' method="POST"  onSubmit={e => handleSubmit(e)} action={THIS_PAGE} data-netlify="true" netlify-honeypot="bot-field">
             <p start={start} sent={sent} className={`${start === true ? 'flex overflow-visible' : 'hidden'} ${sent === true ? 'text-green-500' : 'text-red-500'}`}>{statusText}</p>
-            <input type="hidden" name="form-name" value="services"/>
+            <input type="hidden" name="form-name" value="contact"/>
             <input style={{display: "none"}} name="bot-field" />
             <input type="text" name="name" id="name" placeholder="Name" value={formData.name} onChange={e => handleChange(e)} required/>
             <input type="email" name="email" id="email" placeholder="Email" value={formData.email} onChange={e => handleChange(e)} required/>
