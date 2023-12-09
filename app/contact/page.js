@@ -12,7 +12,7 @@ const Contact = () => {
     <div className='flex flex-col gap-14 px-[20%] pt-20 max-sm:px-[5%]'>
       <h1>Contact</h1>
       <p>{"Whether you have a question or just want to say hi, I'll try my best to get back to you!"} Direct email: <div className='font-semibold select-all'>e.loutos8@gmail.com</div></p>
-      <form name='contact' className='flex flex-col gap-5 pr-[40%] max-xl:pr-[30%] max-lg:pr-[20%] max-md:pr-[10%] max-sm:pr-0' method="POST" data-netlify="true" >
+      <form name='contact' className='flex flex-col gap-5 pr-[40%] max-xl:pr-[30%] max-lg:pr-[20%] max-md:pr-[10%] max-sm:pr-0' action='/success' method="POST" data-netlify="true" >
         <input type="hidden" name="form-name" value="contact"/>
         {/* <input style={{display: "none"}} name="bot-field" /> */}
         <input type="text" name="name" id="name" placeholder="Name" required/>
