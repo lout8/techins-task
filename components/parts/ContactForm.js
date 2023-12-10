@@ -2,12 +2,11 @@
 import {useState} from 'react'
 import { useRouter } from 'next/navigation'
 
-const encode = (data) => {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])).join('&');
-}
+// const encode = (data) => {
+//   return Object.keys(data)
+//     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])).join('&');
+// }
 const ContactForm = () => {
-    const router = useRouter()
     //Forms
     let timer;
     const[start, setStart] = useState(false)
@@ -33,14 +32,12 @@ const ContactForm = () => {
             message: "", 
         }
         
-        const form = e.target
+        const json = JSON.stringify(formData)
 
-        fetch("/", {
+        fetch("https://api.web3forms.com/submit", {
             method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({
-                ...formData,
-              }),
+            headers: { "Content-Type": "application/json", Accept: "application/json", },
+            body: json
         }).then(response => {
             clearTimeout(timer)
             if (response.ok){
@@ -72,6 +69,7 @@ const ContactForm = () => {
     return (
         <form action="https://api.web3forms.com/submit" className="flex flex-col gap-5 pr-[40%] max-xl:pr-[30%] max-lg:pr-[20%] max-md:pr-[10%] max-sm:pr-0" onSubmit={e => handleSubmit(e)} method="POST">
             <input type="hidden" name="access_key" value="4ca25845-4848-43d1-9405-1a36b3cbc2de"/>
+            <input type="hidden" name='subject' value='New message from Elissaios Loutos website'/>
             <input type="text" name="name" id="name" placeholder="Name" value={formData.name} onChange={e => handleChange(e)} required/>
             <input type="email" name="email" id="email" placeholder="Email" value={formData.email} onChange={e => handleChange(e)} required/>
             <textarea name="message" rows="5" placeholder="Message" value={formData.message} onChange={e => handleChange(e)} required/>
