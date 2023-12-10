@@ -6,7 +6,6 @@ import ProjectApp from '@/components/parts/ProjectApp';
 export const metadata = {
   title: 'Projects',
 }
-
 const Projects = () => {
   const data = getProjectsMetadata()
   return (
@@ -21,5 +20,4 @@ const Projects = () => {
     
   )
 }
-
 export default Projects

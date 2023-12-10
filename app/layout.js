@@ -5,7 +5,7 @@ import Footer from '@/components/layout/Footer'
 import ScrollToTop from '@/components/layout/ScrollToTop'
 
 export const metadata = {
-  metadataBase: new URL("https://techins-task.netlify.app/"),
+  metadataBase: new URL("https://elissaios-loutos.netlify.app/"),
   title: {
     default: "Elissaios Loutos",
     template: `%s | Elissaios Loutos`
