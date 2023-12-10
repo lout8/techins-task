@@ -8,7 +8,7 @@ const ProjectComponent = ({title, image, tech, links, shortD, description, handl
   }
   return (
     <div onClick={handleClick} className='group relative mb-4 w-full max-h-[500px] overflow-hidden rounded-2xl cursor-pointer '>
-      {image.includes('.gif') ? 
+      {image.endsWith('.gif') ? 
         <Image src={image} 
         alt={title} 
         width={1280}

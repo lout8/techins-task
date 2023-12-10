@@ -1,11 +1,10 @@
 ---
 title: Fitness Tracker
-image: /img/first.jpg
+image: /img/second.jpg
 technologies:
   - tech: React.js
   - tech: Tailwind CSS
   - tech: Javascript
-  - tech: Express
   - tech: MongoDB
 Links: 
   - link: https://nextjs.org/

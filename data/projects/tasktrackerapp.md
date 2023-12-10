@@ -1,12 +1,11 @@
 ---
 title: Task Tracker App
-image: /img/first.jpg
+image: /img/gif1.gif
 technologies:
   - tech: Next.js
   - tech: Tailwind CSS
   - tech: Javascript
   - tech: Express
-  - tech: MongoDB
 Links: 
   - link: https://nextjs.org/
     name: direct

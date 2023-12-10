@@ -1,6 +1,6 @@
 ---
 title: Task Tracker App
-image: /img/first.jpg
+image: /img/fourth.jpg
 technologies:
   - tech: Next.js
   - tech: Tailwind CSS
@@ -14,5 +14,6 @@ Links:
 date: 30 Nov 2023
 shortDescription: Get real-time weather information for any location.
 description: >-
-  Users can enter a city or use geolocation to get the current weather conditions, temperature, and a five-day forecast. The app fetches data from the OpenWeatherMap API and displays it in an intuitive and visually appealing interface.
+  Users can enter a city or use geolocation to get the current weather conditions, temperature, and a five-day forecast. The app fetches data from the 
+  OpenWeatherMap API and displays it in an intuitive and visually appealing interface.
 ---
