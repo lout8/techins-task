@@ -17,5 +17,5 @@ aboutDescription: >-
   A passionate and detail-oriented Frontend Developer with knowledge in HTML and CSS, as well as third-party libraries such as React.js, Next.js, Gatsby.js and Tailwind CSS.
 
   
-  I approach challenges with a problem-solving mindset, finding elegant and effective solutions. **Whether** it's optimizing performance, improving user [experience](https://www.youtube.com/watch?v=Hiabp1GY8fA), or troubleshooting issues, I enjoy the process of refining and enhancing digital **products**.
+  I approach challenges with a problem-solving mindset, finding elegant and effective solutions. Whether it's optimizing performance, improving user experience, or troubleshooting issues, I enjoy the process of refining and enhancing digital products.
 ---
