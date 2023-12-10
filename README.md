@@ -83,6 +83,7 @@ What the website provides:
   * [![HTML5][HTML5]][HTML5-url]
   * [![CSS3][CSS3]][CSS3-url]
   * [![Tailwind CSS][Tailwind-CSS]][Tailwind-CSS-url]
+  * [![Figma][Figma]][Figma-url]
   
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -154,3 +155,5 @@ Project Link: [https://github.com/lout8/personal-website](https://github.com/lou
 [CSS3-url]: https://www.w3.org/Style/CSS/Overview.en.html
 [Tailwind-CSS]: https://img.shields.io/badge/styled%20components-20232A?style=for-the-badge&logo=tailwindcss&logoColor=#0284c7
 [Tailwind-CSS-url]: https://tailwindcss.com/
+[Figma]: https://img.shields.io/badge/Figma-20232A?style=for-the-badge&logo=figma&logoColor=#FF0000
+[Figma-url]: https://www.figma.com/
