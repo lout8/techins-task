@@ -29,15 +29,15 @@ const ContactForm = () => {
     const handleSubmit = e => {
         e.preventDefault()
         const initialState = {
-        name: "", 
-        email: "",
-        message: "", 
+            name: "", 
+            email: "",
+            message: "", 
         }
         
         const form = e.target
 
-        fetch('/', {
-            method: 'POST',
+        fetch("/", {
+            method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({
                 "form-name": form.getAttribute("name"),
@@ -77,14 +77,14 @@ const ContactForm = () => {
     }
         
     return (
-        <form name='contactSubmit' className='flex flex-col gap-5 pr-[40%] max-xl:pr-[30%] max-lg:pr-[20%] max-md:pr-[10%] max-sm:pr-0' method="POST"  onSubmit={e => handleSubmit(e)} action={THIS_PAGE} data-netlify="true" netlify-honeypot="bot-field">
+        <form name="contactSubmit" className="flex flex-col gap-5 pr-[40%] max-xl:pr-[30%] max-lg:pr-[20%] max-md:pr-[10%] max-sm:pr-0" method="POST"  onSubmit={e => handleSubmit(e)} action={THIS_PAGE} data-netlify="true" netlify-honeypot="bot-field">
             {/* <p start={start} sent={sent} className={`${start === true ? 'flex overflow-visible' : 'hidden'} ${sent === true ? 'text-green-500' : 'text-red-500'}`}>{statusText}</p> */}
             <input type="hidden" name="form-name" value="contactSubmit"/>
             <input style={{display: "none"}} name="bot-field" />
             <input type="text" name="name" id="name" placeholder="Name" value={formData.name} onChange={e => handleChange(e)} required/>
             <input type="email" name="email" id="email" placeholder="Email" value={formData.email} onChange={e => handleChange(e)} required/>
             <textarea name="message" rows="5" placeholder="Message" value={formData.message} onChange={e => handleChange(e)} required/>
-            <button className='bg-neutral-800 dark:bg-neutral-100 text-neutral-100 dark:text-neutral-800 w-fit text-sm py-4 px-3 rounded-md hover:bg-purple-400 dark:hover:bg-purple-400 transition duration-500' type='submit'>Send Message</button>
+            <button className="bg-neutral-800 dark:bg-neutral-100 text-neutral-100 dark:text-neutral-800 w-fit text-sm py-4 px-3 rounded-md hover:bg-purple-400 dark:hover:bg-purple-400 transition duration-500" type="submit">Send Message</button>
         </form>
     )
 }
