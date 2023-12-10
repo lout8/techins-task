@@ -1,5 +1,8 @@
 import './globals.css'
-import LayoutComponent from '../components/layout/LayoutComponent'
+import Providers from "@/lib/providers"
+import Header from '@/components/layout/Header'
+import Footer from '@/components/layout/Footer'
+import ScrollToTop from '@/components/layout/ScrollToTop'
 
 export const metadata = {
   metadataBase: new URL("https://techins-task.netlify.app/"),
@@ -12,8 +15,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <LayoutComponent>
-      {children}
-    </LayoutComponent>
+     <html lang="en">
+        <body className='dark:bg-neutral-800 dark:text-neutral-100 dark:bg-dark-bg-image dark:border-neutral-100 bg-neutral-100 text-neutral-800 bg-fixed bg-bg-image w-full bg-cover'>
+          <Providers>
+            <ScrollToTop/>
+            <Header/>
+            {children}
+            <Footer/>
+          </Providers>
+        </body>
+      </html>
   )
 }

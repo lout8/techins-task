@@ -1,14 +1,14 @@
 'use client'
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { usePathname } from 'next/navigation'
-import { useEffect } from 'react'
 import Link from 'next/link'
 import ThemeSwitch from './ThemeSwitch'
 
 import { HiBars3 } from "react-icons/hi2";
 
-const Header = ({toggle, setBar}) => {
+const Header = () => {
   const pathname = usePathname();
+  const [toggle, setBar] = useState(false)
   const handleBar = () => {setBar(!toggle)}
   const closeBar = () => {setBar(false)}
   useEffect(() => {
@@ -16,6 +16,9 @@ const Header = ({toggle, setBar}) => {
       top: 0,
       behavior: "smooth",
     })
+  }, [toggle]);
+  useEffect(() => {
+    document.body.className = toggle === true ? 'dark:bg-neutral-800 dark:text-neutral-100 dark:bg-dark-bg-image dark:border-neutral-100 bg-neutral-100 text-neutral-800 bg-fixed bg-bg-image w-full bg-cover overflow-hidden' : 'dark:bg-neutral-800 dark:text-neutral-100 dark:bg-dark-bg-image dark:border-neutral-100 bg-neutral-100 text-neutral-800 bg-fixed bg-bg-image w-full bg-cover overflow-scroll';
   }, [toggle]);
   const logo = (
     <svg className=' w-24 h-7 max-sm:w-30 max-sm:h-7' viewBox="0 0 111 28"  fill="none" xmlns="http://www.w3.org/2000/svg">

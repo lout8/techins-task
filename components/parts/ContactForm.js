@@ -19,7 +19,7 @@ const ContactForm = () => {
         email: "",
         message: "", 
     })
-    const [statusText, setStatusText] = useState("")
+    const [statusText, setStatusText] = useState()
     const handleChange = e => {
         const key = e.target.name
         const updatedFormValue = e.target.value
@@ -43,12 +43,24 @@ const ContactForm = () => {
                 "form-name": form.getAttribute("name"),
                 ...formData,
               }),
-        }).then(() => {
-            alert("Success!")
-            setFormData(initialState)
-            router.push(THIS_PAGE)
-        }
-            ).catch((error) => console.log(`Error:${error}`))
+        }).then(response => {
+            clearTimeout(timer)
+            if (response.ok){
+              setFormData(initialState)
+            //   setStatusText("Σας ευχαριστούμε για το μύνημα σας.")
+            setStatusText(<p className='dark:text-green-500 text-green-500'>Σας ευχαριστούμε για το μύνημα σας.</p>)
+              runTimer()
+              setSent(true)
+              setStart(true)
+            }
+            else{
+            //   setStatusText("Σφάλμα: δοκιμάστε ξανά.") 
+            setStatusText(<p className='dark:text-red-500 text-red-500'>Σφάλμα: δοκιμάστε ξανά.</p>) 
+              runTimer()
+              setSent(false) 
+              setStart(true)
+            } 
+        }).catch((error) => console.log(`Error:${error}`))
     }
 
     const runTimer = () =>{
@@ -61,7 +73,7 @@ const ContactForm = () => {
         
     return (
         <form name="contactSubmit" className="flex flex-col gap-5 pr-[40%] max-xl:pr-[30%] max-lg:pr-[20%] max-md:pr-[10%] max-sm:pr-0" method="POST"  onSubmit={e => handleSubmit(e)} action={THIS_PAGE} data-netlify="true" netlify-honeypot="bot-field">
-            {/* <p start={start} sent={sent} className={`${start === true ? 'flex overflow-visible' : 'hidden'} ${sent === true ? 'text-green-500' : 'text-red-500'}`}>{statusText}</p> */}
+            <p className={`${start === true ? 'flex overflow-visible' : 'hidden'}`}>{statusText}</p>
             <input type="hidden" name="form-name" value="contactSubmit"/>
             <input style={{display: "none"}} name="bot-field" />
             <input type="text" name="name" id="name" placeholder="Name" value={formData.name} onChange={e => handleChange(e)} required/>
