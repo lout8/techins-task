@@ -84,6 +84,7 @@ What the website provides:
   * [![CSS3][CSS3]][CSS3-url]
   * [![Tailwind CSS][Tailwind-CSS]][Tailwind-CSS-url]
   * [![Figma][Figma]][Figma-url]
+  * [![Web3Form][Web3Form]][Web3Form-url]
   
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -157,3 +158,5 @@ Project Link: [https://github.com/lout8/personal-website](https://github.com/lou
 [Tailwind-CSS-url]: https://tailwindcss.com/
 [Figma]: https://img.shields.io/badge/Figma-20232A?style=for-the-badge&logo=figma&logoColor=#FF0000
 [Figma-url]: https://www.figma.com/
+[Web3Form]: https://img.shields.io/badge/Web3Forms-20232A?style=for-the-badge&logo=Web3Forms&logoColor=#FF0000
+[Web3Form-url]: https://web3forms.com/
