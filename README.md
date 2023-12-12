@@ -64,7 +64,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This is a pesronal website that created with React.js and Styled-components. 
+This is a portfolio website that developed with next.js and tailwind CSS. 
  
 What the website provides:
 * Home page
