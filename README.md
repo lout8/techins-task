@@ -134,7 +134,7 @@ This is an example of how to list things you need to use the software and how to
 
 Elissaios Loutos - e.loutos8@gmail.com
 
-Project Link: [https://github.com/lout8/personal-website](https://github.com/lout8/personal-website)
+Project Link: [https://github.com/lout8/techins-task](https://github.com/lout8/techins-task)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
